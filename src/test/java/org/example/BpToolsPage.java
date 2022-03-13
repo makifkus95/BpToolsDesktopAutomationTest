@@ -48,6 +48,12 @@ public class BpToolsPage extends MainPage{
         clearElements(txtIv);
         driver.findElement(txtIv).sendKeys(iv);
         wait(1);
-        driver.quit();
+    }
+
+    public void clickEncrypt(){
+        driver.findElement(btnEncrypt).click();
+        wait(1);
+        String b = driver.findElement(txtEncryptedData).getText();
+        System.out.println(b);
     }
 }

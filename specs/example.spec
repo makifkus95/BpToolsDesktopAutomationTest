@@ -11,3 +11,4 @@
 * Key alanına "25432A462D4A614E645267556B587032" yazılır.
 * Data alanına "Merhaba Test Takımı" yazılır.
 * IV alanına "11111111111111111111111111111111" yazılır.
+* Encrypt butonuna tıklanır.

@@ -12,4 +12,6 @@ public class WiniumDireverElements {
     By txtKey = By.id("6076");
     By txtData = By.id("6077");
     By txtIv = By.id("6078");
+    By btnEncrypt = By.id("-31950");
+    By txtEncryptedData = By.id("-31976");
 }

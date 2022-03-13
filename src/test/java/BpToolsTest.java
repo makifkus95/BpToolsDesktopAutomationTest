@@ -53,4 +53,9 @@ public class BpToolsTest {
     public void setIv(String iv)  {
         bpToolsPage.setIv(iv);
     }
+
+    @Step("Encrypt butonuna tıklanır.")
+    public void clickEncrypt()  {
+        bpToolsPage.clickEncrypt();
+    }
 }
