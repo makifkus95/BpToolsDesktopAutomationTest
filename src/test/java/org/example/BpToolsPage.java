@@ -1,10 +1,5 @@
 package org.example;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-
 public class BpToolsPage extends MainPage{
 
     public void clickCipher(){
@@ -53,7 +48,17 @@ public class BpToolsPage extends MainPage{
     public void clickEncrypt(){
         driver.findElement(btnEncrypt).click();
         wait(1);
-        String b = driver.findElement(txtEncryptedData).getText();
-        System.out.println(b);
+    }
+
+    public boolean compare(String text){
+        String textEncrypt = driver.findElement(txtEncryptedData).getText();
+        if (text.contains(textEncrypt)){
+            return true;
+        }
+        return false;
+    }
+
+    public void quid(){
+        driver.quit();
     }
 }

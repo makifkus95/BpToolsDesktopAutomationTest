@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.winium.DesktopOptions;
 import org.openqa.selenium.winium.WiniumDriver;
 
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -47,5 +48,20 @@ public class MainPage extends WiniumDireverElements {
             driver.findElement(by).clear();
             i++;
         }
+    }
+
+    public String getTesxtFile(){
+        BufferedReader reader = null;
+        try {
+            File file = new File(".\\\\Tools\\\\Encrypt-Data");
+            reader = new BufferedReader(new FileReader(file));
+            String textFile = reader.readLine();
+            return textFile;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

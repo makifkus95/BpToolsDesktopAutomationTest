@@ -12,3 +12,4 @@
 * Data alanına "Merhaba Test Takımı" yazılır.
 * IV alanına "11111111111111111111111111111111" yazılır.
 * Encrypt butonuna tıklanır.
+* Encrypted Data ile dosya içeriği karşılaştırlır.

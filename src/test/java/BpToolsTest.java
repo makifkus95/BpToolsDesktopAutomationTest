@@ -1,5 +1,7 @@
+import com.thoughtworks.gauge.AfterScenario;
 import com.thoughtworks.gauge.Step;
 import org.example.BpToolsPage;
+import org.junit.Assert;
 
 public class BpToolsTest {
     BpToolsPage bpToolsPage;
@@ -57,5 +59,16 @@ public class BpToolsTest {
     @Step("Encrypt butonuna tıklanır.")
     public void clickEncrypt()  {
         bpToolsPage.clickEncrypt();
+    }
+
+    @Step("Encrypted Data ile dosya içeriği karşılaştırlır.")
+    public void compareEncrypt()  {
+        String text = bpToolsPage.getTesxtFile();
+        Assert.assertTrue("Dosya içerikleri aynı değil",bpToolsPage.compare(text));
+    }
+
+    @AfterScenario
+    public void quit(){
+        bpToolsPage.quid();
     }
 }
