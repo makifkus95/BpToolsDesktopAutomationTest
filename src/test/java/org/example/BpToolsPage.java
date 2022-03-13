@@ -32,21 +32,20 @@ public class BpToolsPage extends MainPage{
         wait(1);
     }
 
-    public void setKey(String key)  {
-        driver.findElement(txtKey).clear();
+    public void setKey(String key) {
+        clearElements(txtKey);
         driver.findElement(txtKey).sendKeys(key);
         wait(1);
     }
 
     public void setData(String data){
         driver.findElement(txtData).click();
-        driver.findElement(txtData).clear();
         driver.findElement(txtData).sendKeys(data);
         wait(1);
     }
 
     public void setIv(String iv){
-        driver.findElement(txtIv).clear();
+        clearElements(txtIv);
         driver.findElement(txtIv).sendKeys(iv);
         wait(1);
         driver.quit();

@@ -1,6 +1,7 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.winium.DesktopOptions;
 import org.openqa.selenium.winium.WiniumDriver;
 
@@ -39,5 +40,12 @@ public class MainPage extends WiniumDireverElements {
         wait(1);
     }
 
-
+    public void clearElements(By by){
+        String a = driver.findElement(by).getText();
+        int i = 0;
+        while(i < a.length()){
+            driver.findElement(by).clear();
+            i++;
+        }
+    }
 }
